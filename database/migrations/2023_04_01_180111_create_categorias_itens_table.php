@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('categorias_itens', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('item_id');
-            $table->unsignedBigInteger('categorias_id');
+            $table->unsignedBigInteger('categoria_id');
             $table->timestamps();
 
             $table->foreign('item_id')->references('id')->on('itens')->onDelete('cascade');
-            $table->foreign('categorias_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
         });
     }
 

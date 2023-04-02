@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('itens', function (Blueprint $table) {
             $table->id();
             $table->string('nome')->nullable();
-            $table->string('desc');
+            $table->string('descricao');
             $table->double('preco');
             $table->timestamps();
         });
